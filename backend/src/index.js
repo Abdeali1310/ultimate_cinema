@@ -9,21 +9,26 @@ const authRouter = require("./routers/authRouter");
 const reviewRouter = require("./routers/reviewRouter")
 
 require('dotenv').config();
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "https://ultimate-cinema-client.vercel.app");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 
-app.use(cors({ origin: "https://ultimate-cinema-client.vercel.app" }));
+app.use(cors({ origin: "*" }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/",(req,res)=>{
+app.get("/", (req, res) => {
     res.send("Hello World")
 })
-app.use("/user",userRouter)
-app.use("/movie",movieRouter)
-app.use("/tv",tvRouter)
+app.use("/user", userRouter)
+app.use("/movie", movieRouter)
+app.use("/tv", tvRouter)
 app.use('/auth', authRouter);
-app.use("/review",reviewRouter)
+app.use("/review", reviewRouter)
 
-app.listen(process.env.PORT,()=>{
-    console.log("App is running on PORT "+process.env.PORT);
+app.listen(process.env.PORT, () => {
+    console.log("App is running on PORT " + process.env.PORT);
     DB_connect()
 })
