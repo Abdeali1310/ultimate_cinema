@@ -14,6 +14,9 @@ app.use(cors({origin:process.env.FRONTEND_URL}))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.get("/",(req,res)=>{
+    res.send("Hello World")
+})
 app.use("/user",userRouter)
 app.use("/movie",movieRouter)
 app.use("/tv",tvRouter)
