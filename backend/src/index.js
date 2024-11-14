@@ -10,7 +10,7 @@ const reviewRouter = require("./routers/reviewRouter")
 
 require('dotenv').config();
 
-app.use(cors({origin:process.env.FRONTEND_URL}))
+app.use(cors({ origin: "https://ultimate-cinema-client.vercel.app" }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
