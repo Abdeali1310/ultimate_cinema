@@ -23,7 +23,7 @@ function Signin() {
     console.log('Login submitted:', formData);
     try {
         const res = await axios.post(
-          "http://localhost:3000/user/signin",
+          "https://ultimate-cinema-server.vercel.app/user/signin",
           formData
         );
         console.log(res);

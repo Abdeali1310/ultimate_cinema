@@ -48,7 +48,7 @@ function UserProfile() {
 
   const fetchUserData = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/user/", {
+      const response = await axios.get("https://ultimate-cinema-server.vercel.app/user/", {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },
@@ -73,7 +73,7 @@ function UserProfile() {
 
     try {
       const response = await axios.delete(
-        `http://localhost:3000/movie/remove/${id}/user/${userId}`,
+        `https://ultimate-cinema-server.vercel.app/movie/remove/${id}/user/${userId}`,
         {
           headers: {
             Authorization: "Bearer " + localStorage.getItem("token"),
@@ -101,7 +101,7 @@ function UserProfile() {
 
     try {
       const response = await axios.delete(
-        `http://localhost:3000/tv/remove/${id}/user/${userId}`,
+        `https://ultimate-cinema-server.vercel.app/tv/remove/${id}/user/${userId}`,
         {
           headers: {
             Authorization: "Bearer " + localStorage.getItem("token"),
@@ -128,7 +128,7 @@ function UserProfile() {
     console.log(id);
     try {
       const response = await axios.delete(
-        `http://localhost:3000/movie/remove/${id}/user/${userId}`,
+        `https://ultimate-cinema-server.vercel.app/movie/remove/${id}/user/${userId}`,
         {
           headers: {
             Authorization: "Bearer " + localStorage.getItem("token"),
@@ -142,7 +142,7 @@ function UserProfile() {
       );
 
       const postResponse = await axios.post(
-        `http://localhost:3000/movie/add/watched/${id}/user/${userId}`,
+        `https://ultimate-cinema-server.vercel.app/movie/add/watched/${id}/user/${userId}`,
         {},
         {
           headers: {
@@ -167,7 +167,7 @@ function UserProfile() {
     console.log(id);
     try {
       const response = await axios.delete(
-        `http://localhost:3000/tv/remove/${id}/user/${userId}`,
+        `https://ultimate-cinema-server.vercel.app/tv/remove/${id}/user/${userId}`,
         {
           headers: {
             Authorization: "Bearer " + localStorage.getItem("token"),
@@ -181,7 +181,7 @@ function UserProfile() {
       );
 
       const postResponse = await axios.post(
-        `http://localhost:3000/tv/add/watched/${id}/user/${userId}`,
+        `https://ultimate-cinema-server.vercel.app/tv/add/watched/${id}/user/${userId}`,
         {},
         {
           headers: {

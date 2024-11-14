@@ -15,7 +15,7 @@ const RatingReviewForm = ({ movieId }) => {
   const handleSubmit = async () => {
     try {
       const res = await axios.post(
-        `http://localhost:3000/review/add/${userId}/${movieId}`,
+        `https://ultimate-cinema-server.vercel.app/review/add/${userId}/${movieId}`,
         {
           comment: review,
           rating: rating,

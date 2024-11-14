@@ -14,7 +14,7 @@ function Header({ data }) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/user/", {
+      .get("https://ultimate-cinema-server.vercel.app/user/", {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),
         },

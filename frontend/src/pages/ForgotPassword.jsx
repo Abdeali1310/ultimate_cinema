@@ -9,7 +9,7 @@ function ForgotPassword() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:3000/auth/forgot-password', { email });
+      const res = await axios.post('https://ultimate-cinema-server.vercel.app/auth/forgot-password', { email });
       setMessage('A SignIn link has been sent to your email. Please Check and open from it.');
     } catch (error) {
       setMessage('Error sending password reset email.');

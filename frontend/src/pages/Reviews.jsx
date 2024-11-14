@@ -11,7 +11,7 @@ const Reviews = ({ movieId }) => {
     const fetchReviews = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/review/${movieId}`
+          `https://ultimate-cinema-server.vercel.app/review/${movieId}`
         );
         setReviews(response.data);
         setLoading(false);

@@ -50,7 +50,7 @@ function ProfileEdit() {
 
     try {
       const res = await axios.put(
-        `http://localhost:3000/user/profile/edit/${userId}`,
+        `https://ultimate-cinema-server.vercel.app/user/profile/edit/${userId}`,
         formDataToSend
       );
       console.log(res);

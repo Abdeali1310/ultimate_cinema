@@ -53,7 +53,7 @@ function TVDetails() {
 
     try {
       const res = await axios.get(
-        `http://localhost:3000/tv/add/${id}/user/${userId}`,
+        `https://ultimate-cinema-server.vercel.app/tv/add/${id}/user/${userId}`,
 
         {
           headers: {
@@ -77,7 +77,7 @@ function TVDetails() {
 
     try {
       const res = await axios.get(
-        `http://localhost:3000/user/`,
+        `https://ultimate-cinema-server.vercel.app/user/`,
 
         {
           headers: {
@@ -101,7 +101,7 @@ function TVDetails() {
       console.log("Added to watchlist");
       const userId = localStorage.getItem("userId");
       const res = await axios.post(
-        `http://localhost:3000/tv/add/${id}/user/${userId}`,
+        `https://ultimate-cinema-server.vercel.app/tv/add/${id}/user/${userId}`,
         {},
         {
           headers: {
